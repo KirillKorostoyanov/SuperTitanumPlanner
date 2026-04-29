@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
 using MissionPlanner.Utilities;
@@ -11,9 +12,11 @@ namespace MissionPlanner
         {
             InitializeComponent();
 
-            string strVersion = typeof(Splash).GetType().Assembly.GetName().Version.ToString();
+            string strVersion = File.Exists("version.txt")
+                ? File.ReadAllText("version.txt").Trim()
+                : Assembly.GetExecutingAssembly().GetName().Version.ToString();
 
-            TXT_version.Text = "Version: Titan " + Application.ProductVersion; // +" Build " + strVersion;
+            TXT_version.Text = "Version: Titan " + strVersion;
 
             // Use theme color for bottom line instead of hardcoded green
             label1.ForeColor = ThemeManager.BannerColor2;
