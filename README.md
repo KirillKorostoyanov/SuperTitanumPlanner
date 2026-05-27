@@ -55,23 +55,10 @@ mono MissionPlanner.exe
 | Platform | Status |
 |----------|--------|
 | Windows | ✅ Full Support |
-| Linux (Mono) | ⚠️ Partial Support |
-| macOS | ⚠️ Experimental |
-| Android | ✅ [Play Store](https://play.google.com/store/apps/details?id=com.michaeloborne.MissionPlanner) |
-| iOS | ⚠️ Experimental |
-
----
-
-## Building the Installer
-
-* Set up the WiX toolset
-* Switch to Release mode
-* Clean Solution → Build a Release version of MissionPlanner → Build solution
-* Copy drivers into the `Msi` folder so they live in `\Msi\Drivers`
-* Build the `wix` project from the MissionPlanner solution (outputs to the `Msi` folder)
-* Go to the `Msi` folder
-* Run `installer.bat`
-* Run `create.bat`
+| Linux (Mono) | ⚠️ WIP |
+| macOS | ⚠️ WIP |
+| Android | ⚠️ WIP |
+| iOS | ⚠️ WIP |
 
 ---
 
